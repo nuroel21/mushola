@@ -10,12 +10,9 @@
 		<link rel="stylesheet" href="styles.css" />
 		<title>Daftar Wakif/ Donatur</title>
 	</head>
-
 	<body>
 		<div class="container">
 			<h3 class="text-center mb-4">
-				<img src="logo.png" alt="Logo SDN Trengguno" style="inline-size: 50px; block-size: 50px; vertical-align: middle; margin-inline-end: 10px" />
-				<br />
 				DAFTAR DONATUR / WAKIF <br />
 				Pembangunan Mushola SDN Trengguno Ponjong
 			</h3>
@@ -25,7 +22,7 @@
 				<div class="row">
 					<!-- Card Dana Dibutuhkan -->
 					<div class="col-md-4">
-						<div class="card bg-primary text-white text-center">
+						<div class="card bg-primary text-white">
 							<div class="card-body">
 								<h5 class="card-title">Dana Dibutuhkan</h5>
 								<p class="card-text" id="danaDibutuhkan">Rp. 110,000,000</p>
@@ -34,7 +31,7 @@
 					</div>
 					<!-- Card Dana Terkumpul -->
 					<div class="col-md-4">
-						<div class="card bg-success text-white text-center">
+						<div class="card bg-success text-white">
 							<div class="card-body">
 								<h5 class="card-title">Dana Terkumpul</h5>
 								<p class="card-text" id="donasiTerkumpul">Rp. 0</p>
@@ -43,7 +40,7 @@
 					</div>
 					<!-- Card Kekurangan -->
 					<div class="col-md-4">
-						<div class="card bg-danger text-white text-center">
+						<div class="card bg-danger text-white">
 							<div class="card-body">
 								<h5 class="card-title">Kekurangan</h5>
 								<p class="card-text" id="kekurangan">Rp. 100,000,000</p>
@@ -52,53 +49,9 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="container-fluid">
-				<!-- Galeri Progress -->
-				<div class="progress-gallery mb-4">
-					<h5 class="text-center">Progress Pembangunan</h5>
-					<div class="carousel-container">
-						<div class="carousel-slide">
-							<img src="1.jpeg" alt="Foto 1" class="gallery-image" />
-							<img src="10.jpeg" alt="Foto 2" class="gallery-image" />
-							<img src="11.jpeg" alt="Foto 3" class="gallery-image" />
-							<img src="12.jpeg" alt="Foto 4" class="gallery-image" />
-							<img src="2.jpeg" alt="Foto 5" class="gallery-image" />
-							<img src="3.jpeg" alt="Foto 6" class="gallery-image" />
-							<img src="4.jpeg" alt="Foto 7" class="gallery-image" />
-							<img src="5.jpeg" alt="Foto 8" class="gallery-image" />
-							<img src="6.jpeg" alt="Foto 9" class="gallery-image" />
-							<img src="7.jpeg" alt="Foto 10" class="gallery-image" />
-							<img src="8.jpeg" alt="Foto 11" class="gallery-image" />
-							<img src="9.jpeg" alt="Foto 12" class="gallery-image" />
-						</div>
-						<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-						<button class="next" onclick="moveSlide(1)">&#10095;</button>
-					</div>
-				</div>
-
-				<!-- Tabel -->
-				<div class="table-container">
-					<table id="example" class="table table-striped table-bordered"></table>
-				</div>
-			</div>
+			<!-- Data Table -->
+			<table id="example" class="table table-striped table-bordered"></table>
 		</div>
-
-		<!-- Modal for displaying image in larger size -->
-		<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="imageModalLabel">Image View</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<img id="modalImage" src="" alt="Image" class="img-fluid" />
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<footer>
 			<p>© 2024 SDN Trengguno Ponjong. All Rights Reserved.</p>
 		</footer>
@@ -110,10 +63,5 @@
 		<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
 		<script src="script.js"></script>
-
-		<!-- Image Click Handler -->
-		<!-- <script>
-    
-  </script> -->
 	</body>
 </html>
