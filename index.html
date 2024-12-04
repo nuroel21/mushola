@@ -8,20 +8,17 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" />
 		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css" />
 		<link rel="stylesheet" href="styles.css" />
-		<style>	
-
-		</style>
 		<title>Daftar Wakif/ Donatur</title>
 	</head>
 
 	<body>
 		<div class="container">
 			<h3 class="text-center mb-4">
-						<img src="logo.png" alt="Logo SDN Trengguno" style="inline-size: 50px; block-size: 50px; vertical-align: middle; margin-inline-end: 10px" />
-						<br />
-						DAFTAR DONATUR / WAKIF <br />
-						Pembangunan Mushola SDN Trengguno Ponjong
-					</h3>
+				<img src="logo.png" alt="Logo SDN Trengguno" style="inline-size: 50px; block-size: 50px; vertical-align: middle; margin-inline-end: 10px" />
+				<br />
+				DAFTAR DONATUR / WAKIF <br />
+				Pembangunan Mushola SDN Trengguno Ponjong
+			</h3>
 
 			<!-- Card for Total Information -->
 			<div class="container">
@@ -57,34 +54,50 @@
 			</div>
 
 			<div class="container-fluid">
-    <!-- Galeri Progress -->
-    <div class="progress-gallery mb-4">
-        <h5 class="text-center">Progress Pembangunan</h5>
-        <div class="carousel-container">
-    <div class="carousel-slide">
-      <img src="1.jpeg" alt="Foto 1">
-      <img src="10.jpeg" alt="Foto 2">
-      <img src="11.jpeg" alt="Foto 3">
-      <img src="12.jpeg" alt="Foto 4">
-      <img src="2.jpeg" alt="Foto 5">
-      <img src="3.jpeg" alt="Foto 6">
-      <img src="4.jpeg" alt="Foto 7">
-      <img src="5.jpeg" alt="Foto 8">
-      <img src="6.jpeg" alt="Foto 9">
-      <img src="7.jpeg" alt="Foto 10">
-      <img src="8.jpeg" alt="Foto 11">
-      <img src="9.jpeg" alt="Foto 12">
-    </div>
-    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moveSlide(1)">&#10095;</button>
-  </div>
-    </div>
+				<!-- Galeri Progress -->
+				<div class="progress-gallery mb-4">
+					<h5 class="text-center">Progress Pembangunan</h5>
+					<div class="carousel-container">
+						<div class="carousel-slide">
+							<img src="image/1.jpeg" alt="Foto 1" class="gallery-image" />
+							<img src="image/10.jpeg" alt="Foto 2" class="gallery-image" />
+							<img src="image/11.jpeg" alt="Foto 3" class="gallery-image" />
+							<img src="image/12.jpeg" alt="Foto 4" class="gallery-image" />
+							<img src="image/2.jpeg" alt="Foto 5" class="gallery-image" />
+							<img src="image/3.jpeg" alt="Foto 6" class="gallery-image" />
+							<img src="image/4.jpeg" alt="Foto 7" class="gallery-image" />
+							<img src="image/5.jpeg" alt="Foto 8" class="gallery-image" />
+							<img src="image/6.jpeg" alt="Foto 9" class="gallery-image" />
+							<img src="image/7.jpeg" alt="Foto 10" class="gallery-image" />
+							<img src="image/8.jpeg" alt="Foto 11" class="gallery-image" />
+							<img src="image/9.jpeg" alt="Foto 12" class="gallery-image" />
+						</div>
+						<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+						<button class="next" onclick="moveSlide(1)">&#10095;</button>
+					</div>
+				</div>
 
-    <!-- Tabel -->
-    <div class="table-container">
-        <table id="example" class="table table-striped table-bordered"></table>
-    </div>
-</div>
+				<!-- Tabel -->
+				<div class="table-container">
+					<table id="example" class="table table-striped table-bordered"></table>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for displaying image in larger size -->
+		<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="imageModalLabel">Image View</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<img id="modalImage" src="" alt="Image" class="img-fluid" />
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<footer>
 			<p>© 2024 SDN Trengguno Ponjong. All Rights Reserved.</p>
@@ -97,5 +110,10 @@
 		<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
 		<script src="script.js"></script>
+
+		<!-- Image Click Handler -->
+		<!-- <script>
+    
+  </script> -->
 	</body>
 </html>
