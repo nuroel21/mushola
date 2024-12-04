@@ -2,6 +2,9 @@ html,
 body {
 	block-size: 100%;
 	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -9,69 +12,59 @@ body {
 	flex-direction: column;
 	background: linear-gradient(135deg, #74ebd5, #acb6e5);
 	color: #333;
-	font-family: Arial, sans-serif;
-	margin: 0;
 }
 
 .container {
 	flex: 1;
 	background: rgba(255, 255, 255, 0.9);
-	padding: 2rem;
+	padding: 1rem;
 	border-radius: 10px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	margin: 1rem auto;
 	max-inline-size: 1200px;
 	inline-size: 90%;
+	overflow: hidden;
 }
 
-.btn-primary {
-	background: #4caf50;
-	border: none;
-	transition: background 0.3s ease;
-	padding: 0.5rem 1.5rem;
-	margin: 0.5rem;
+/* Card Styles */
+.card {
+	border-radius: 10px;
+	margin-block-end: 1rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body {
+	padding: 1rem;
+}
+
+.card-title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.card-text {
 	font-size: 1rem;
-	border-radius: 5px;
-	display: inline-block;
-}
-
-.btn-primary:hover {
-	background: #45a049;
 }
 
 h3,
 h4 {
 	color: #444;
 	text-align: center;
-}
-.card-primary {
-	background-color: #007bff; /* Biru */
-	color: #fff;
-	margin-bottom: 2px;
+	font-size: 1.5rem;
+	margin: 0.5rem;
 }
 
-.card-secondary {
-	background-color: #6c757d; /* Abu-abu */
-	color: #fff;
-	margin-bottom: 2px;
+.card:hover {
+	transform: translateY(-5px); /* Hover effect */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
 }
 
-.card-success {
-	background-color: #28a745; /* Hijau */
-	color: #fff;
-	margin-bottom: 2px;
-}
-
-.card-danger {
-	background-color: #da5b45; /* Merah */
-	color: #fff;
-	margin-bottom: 2px;
-}
+/* Carousel Styles */
 .carousel-container {
 	position: relative;
-	inline-size: 80%;
-	margin: 10px auto;
+	inline-size: 100%;
 	overflow: hidden;
+	margin: 10px auto;
 }
 
 .carousel-slide {
@@ -80,12 +73,10 @@ h4 {
 }
 
 .carousel-slide img {
-	inline-size: 25%; /* Tampilkan 3 gambar per baris */
-	block-size: 150px; /* Sesuaikan tinggi gambar agar konsisten */
-	object-fit: cover; /* Agar gambar terpotong sesuai ukuran tanpa merusak proporsi */
+	inline-size: 33.33%; /* Ensure 3 images fit per slide */
+	object-fit: cover;
 	border-radius: 10px;
 	margin: 5px;
-	border-radius: 10px;
 }
 
 button {
@@ -98,23 +89,86 @@ button {
 	border: none;
 	padding: 10px;
 	cursor: pointer;
-	z-index: 10;
 }
 
-.prev {
-	inset-inline-start: 10px;
+/* Responsiveness: Mobile-First Approach */
+@media (max-inline-size: 768px) {
+	/* Adjust container padding and make it full-width */
+	.container {
+		padding: 1rem;
+		inline-size: 100%;
+		margin: 1rem;
+	}
+
+	/* Card layout adjustment for small screens */
+	.row {
+		display: flex;
+		flex-direction: column; /* Stack the cards vertically */
+		gap: 1rem;
+	}
+
+	.col-md-4 {
+		inline-size: 100%; /* Ensure each card takes full width */
+	}
+
+	/* Reducing font size of titles on smaller screens */
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	/* Carousel image adjustments */
+	.carousel-slide img {
+		inline-size: 100%; /* Make the carousel images full width on small screens */
+		block-size: auto; /* Maintain aspect ratio */
+	}
+
+	/* Carousel button styles */
+	button {
+		font-size: 25px; /* Smaller button size */
+	}
+
+	/* Footer font size adjustment */
+	footer {
+		font-size: 0.75em;
+	}
+
+	/* Table container with horizontal scrolling */
+	.table-container {
+		inline-size: 100%;
+		overflow-x: auto; /* Allow horizontal scrolling */
+	}
+
+	table {
+		inline-size: 100%;
+		table-layout: fixed;
+	}
+
+	/* Improve space between footer and table */
+	footer {
+		margin-block-start: 1rem;
+	}
+
+	/* Card styling tweaks for smaller screens */
+	.card-body {
+		padding: 0.8rem;
+	}
 }
 
-.next {
-	inset-inline-end: 10px;
+/* Large screen adjustments */
+@media (min-inline-size: 768px) {
+	.carousel-slide img {
+		inline-size: 33.33%; /* Keep 3 images per slide */
+	}
 }
 
-table {
-	inline-size: 100%; /* Tabel memenuhi lebar body */
+/* Animations and Interactive Styles */
+.card {
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.carousel .row {
-	block-size: 100%; /* Pastikan gambar menyesuaikan dengan tinggi carousel */
+.card:hover {
+	transform: translateY(-5px); /* Hover effect */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
 }
 
 footer {
@@ -124,20 +178,12 @@ footer {
 	background: #f9f9f9;
 	color: #666;
 	inline-size: 100%;
+	border-block-start: 1px solid #ddd;
 }
 
+/* Smaller Footer for Mobile */
 @media (max-inline-size: 768px) {
-	h3,
-	h4 {
-		font-size: calc(1em + 2vw);
-	}
-
-	.btn-primary {
-		inline-size: 100%;
-		padding: 0.7rem;
-	}
-
-	.container {
-		padding: 5vw;
+	footer {
+		font-size: 0.7em; /* Smaller footer text */
 	}
 }
