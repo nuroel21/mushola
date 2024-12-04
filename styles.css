@@ -47,7 +47,7 @@ h4 {
 .card-primary {
 	background-color: #007bff; /* Biru */
 	color: #fff;
-	font-weight: 700;
+	margin : 2px;
 }
 
 .card-secondary {
