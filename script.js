@@ -52,38 +52,3 @@ $(document).ready(function () {
 		return prefix + rupiah;
 	}
 });
-
-let index = 0;
-
-function moveSlide(step) {
-	const slides = document.querySelectorAll(".carousel-slide img");
-	const totalSlides = slides.length;
-
-	index += step;
-
-	// Jika index kurang dari 0 (sebelum slide pertama), kita kembali ke slide terakhir
-	if (index < 0) {
-		index = totalSlides - 1;
-	}
-	// Jika index lebih dari jumlah slide (melewati slide terakhir), kita kembali ke slide pertama
-	else if (index >= totalSlides) {
-		index = 0;
-	}
-
-	const carousel = document.querySelector(".carousel-slide");
-	carousel.style.transform = `translateX(-${index * 33.33}%)`; // 33.33% untuk menampilkan 3 gambar per tampilan
-}
-
-// Set interval untuk slide otomatis setiap 3 detik (3000 ms)
-setInterval(() => {
-	moveSlide(1); // Geser ke depan otomatis
-}, 3000);
-document.querySelectorAll(".gallery-image").forEach((image) => {
-	image.addEventListener("click", (e) => {
-		const imageUrl = e.target.src;
-		const modalImage = document.getElementById("modalImage");
-		modalImage.src = imageUrl;
-		const myModal = new bootstrap.Modal(document.getElementById("imageModal"));
-		myModal.show();
-	});
-});
