@@ -1,0 +1,140 @@
+html,
+body {
+	block-size: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(135deg, #74ebd5, #acb6e5);
+	color: #333;
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+.container {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin: 1rem auto;
+	max-inline-size: 1200px;
+	inline-size: 90%;
+}
+
+.btn-primary {
+	background: #4caf50;
+	border: none;
+	transition: background 0.3s ease;
+	padding: 0.5rem 1.5rem;
+	margin: 0.5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.btn-primary:hover {
+	background: #45a049;
+}
+
+h3,
+h4 {
+	color: #444;
+	text-align: center;
+}
+.card-primary {
+	background-color: #007bff; /* Biru */
+	color: #fff;
+	font-weight: 700;
+}
+
+.card-secondary {
+	background-color: #6c757d; /* Abu-abu */
+	color: #fff;
+}
+
+.card-success {
+	background-color: #28a745; /* Hijau */
+	color: #fff;
+}
+
+.card-danger {
+	background-color: #da5b45; /* Merah */
+	color: #fff;
+}
+.carousel-container {
+	position: relative;
+	inline-size: 80%;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+.carousel-slide {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+	inline-size: 25%; /* Tampilkan 3 gambar per baris */
+	block-size: 150px; /* Sesuaikan tinggi gambar agar konsisten */
+	object-fit: cover; /* Agar gambar terpotong sesuai ukuran tanpa merusak proporsi */
+	border-radius: 10px;
+	margin: 5px;
+	border-radius: 10px;
+}
+
+button {
+	position: absolute;
+	inset-block-start: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 30px;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.prev {
+	inset-inline-start: 10px;
+}
+
+.next {
+	inset-inline-end: 10px;
+}
+
+table {
+	inline-size: 100%; /* Tabel memenuhi lebar body */
+}
+
+.carousel .row {
+	block-size: 100%; /* Pastikan gambar menyesuaikan dengan tinggi carousel */
+}
+
+footer {
+	text-align: center;
+	padding: 1em 0;
+	font-size: 0.8em;
+	background: #f9f9f9;
+	color: #666;
+	inline-size: 100%;
+}
+
+@media (max-inline-size: 768px) {
+	h3,
+	h4 {
+		font-size: calc(1em + 2vw);
+	}
+
+	.btn-primary {
+		inline-size: 100%;
+		padding: 0.7rem;
+	}
+
+	.container {
+		padding: 5vw;
+	}
+}
