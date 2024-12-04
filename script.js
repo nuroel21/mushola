@@ -78,3 +78,12 @@ function moveSlide(step) {
 setInterval(() => {
 	moveSlide(1); // Geser ke depan otomatis
 }, 3000);
+document.querySelectorAll(".gallery-image").forEach((image) => {
+	image.addEventListener("click", (e) => {
+		const imageUrl = e.target.src;
+		const modalImage = document.getElementById("modalImage");
+		modalImage.src = imageUrl;
+		const myModal = new bootstrap.Modal(document.getElementById("imageModal"));
+		myModal.show();
+	});
+});
