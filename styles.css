@@ -47,22 +47,25 @@ h4 {
 .card-primary {
 	background-color: #007bff; /* Biru */
 	color: #fff;
-	margin : 2px;
+	margin-bottom: 2px;
 }
 
 .card-secondary {
 	background-color: #6c757d; /* Abu-abu */
 	color: #fff;
+	margin-bottom: 2px;
 }
 
 .card-success {
 	background-color: #28a745; /* Hijau */
 	color: #fff;
+	margin-bottom: 2px;
 }
 
 .card-danger {
 	background-color: #da5b45; /* Merah */
 	color: #fff;
+	margin-bottom: 2px;
 }
 .carousel-container {
 	position: relative;
