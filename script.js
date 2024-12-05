@@ -1,5 +1,7 @@
+// DataTable initialization and additional script logic
+
 $(document).ready(function () {
-	const danaDibutuhkan = 100000000; // Contoh jumlah dana yang dibutuhkan
+	const danaDibutuhkan = 110000000; // Contoh jumlah dana yang dibutuhkan
 
 	// Inisialisasi DataTable
 	const table = $("#example").DataTable({
@@ -17,8 +19,10 @@ $(document).ready(function () {
 					return formatRupiah(data.toString(), "Rp. ");
 				},
 			},
+
 			{ title: "Keterangan", data: "keterangan" },
 		],
+
 		footerCallback: function (row, data, start, end, display) {
 			// Hitung total donasi terkumpul
 			let totalDonasi = data.reduce((sum, record) => {
@@ -52,3 +56,11 @@ $(document).ready(function () {
 		return prefix + rupiah;
 	}
 });
+
+function showImageModal(imageSrc) {
+	// Set the source of the modal image
+	document.getElementById("largeImage").src = imageSrc;
+	// Show the modal
+	let modal = new bootstrap.Modal(document.getElementById("imageModal"));
+	modal.show();
+}
