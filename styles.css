@@ -1,3 +1,4 @@
+/* reset css */
 html,
 body {
 	block-size: 100%;
@@ -8,7 +9,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: linear-gradient(135deg, #74ebd5, #acb6e5);
-	color: #333;
 	font-family: Arial, sans-serif;
 	margin: 0;
 }
@@ -23,6 +23,21 @@ body {
 	max-inline-size: 1200px;
 	inline-size: 90%;
 }
+.table-container {
+	margin-block-start: 2rem;
+	display: flex;
+}
+
+table {
+	inline-size: 100%; /* Pastikan tabel menggunakan 100% lebar container */
+	border-collapse: collapse;
+}
+
+th,
+td {
+	text-align: start;
+	word-wrap: break-word; /* Pecahkan kata panjang agar tetap dalam kolom */
+}
 
 .btn-primary {
 	background: #4caf50;
@@ -32,36 +47,44 @@ body {
 	margin: 0.5rem;
 	font-size: 1rem;
 	border-radius: 5px;
-	display: inline-block;
 }
 
 .btn-primary:hover {
-	background: #45a049;
+	background: #bf15ce;
+}
+.card :hover {
+	background: white;
+	color: blue;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	/* padding: 1rem;
+	margin-block-end: 1rem; */
+}
+.card p {
+	font-size: large;
+	font-family: Arial, sans-serif;
+}
+
+.wakaf-btn {
+	background: linear-gradient(90deg, #00c853, #1b5e20); /* Gradasi Hijau */
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 25px;
+	padding: 5px 10px;
+	transition: all 0.3s ease;
+}
+
+.wakaf-btn:hover {
+	background: linear-gradient(90deg, #1b5e20, #00c853); /* Balik Gradasi */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek Shadow */
+	transform: scale(1.05); /* Efek Zoom */
 }
 
 h3,
 h4 {
 	color: #444;
 	text-align: center;
-}
-.card-primary {
-	background-color: #007bff; /* Biru */
-	color: #fff;
-}
-
-.card-secondary {
-	background-color: #6c757d; /* Abu-abu */
-	color: #fff;
-}
-
-.card-success {
-	background-color: #28a745; /* Hijau */
-	color: #fff;
-}
-
-.card-danger {
-	background-color: #dc3545; /* Merah */
-	color: #fff;
 }
 
 footer {
@@ -70,7 +93,19 @@ footer {
 	font-size: 0.8em;
 	background: #f9f9f9;
 	color: #666;
-	width: 100%;
+	inline-size: 100%;
+}
+
+.card {
+	margin-block-end: 1rem;
+}
+
+.carousel img {
+	block-size: 255px; /* Atur tinggi tetap */
+	object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+	inline-size: 100%;
+	padding-block-end: 2px;
+	border-radius: 10px;
 }
 
 @media (max-inline-size: 768px) {
@@ -86,5 +121,16 @@ footer {
 
 	.container {
 		padding: 5vw;
+	}
+
+	.card {
+		margin-block-end: 1.5rem;
+	}
+	.table-container {
+		padding: 0.5rem;
+	}
+
+	.carousel img {
+		block-size: 150px; /* Tinggi lebih kecil untuk layar kecil */
 	}
 }
