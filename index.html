@@ -2,56 +2,146 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" />
 		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
 		<link rel="stylesheet" href="styles.css" />
-		<title>Daftar Wakif/ Donatur</title>
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yuji+Mai&display=swap" rel="stylesheet" />
+
+		<title>Daftar Wakif/Donatur</title>
 	</head>
 	<body>
 		<div class="container">
 			<h3 class="text-center mb-4">
-				DAFTAR DONATUR / WAKIF <br />
-				Pembangunan Mushola SDN Trengguno Ponjong
+				<img src="logo.png" alt="logo" /> <br />
+				DAFTAR DONATUR / WAKIF
 			</h3>
+			<h4>Pembangunan Mushola SDN Trengguno Ponjong</h4>
 
-			<!-- Card for Total Information -->
-			<div class="container">
-				<div class="row">
-					<!-- Card Dana Dibutuhkan -->
-					<div class="col-md-4">
-						<div class="card bg-primary text-white text-center">
-							<div class="card-body">
-								<h5 class="card-title">Dana Dibutuhkan</h5>
-								<p class="card-text" id="danaDibutuhkan">Rp. 110,000,000</p>
-							</div>
+			<div class="row">
+				<!-- Card Dana Dibutuhkan -->
+				<div class="col-md-4 col-sm-12">
+					<div class="card bg-primary text-white text-center">
+						<div class="card-body">
+							<h5 class="card-title">Dana Dibutuhkan</h5>
+							<p class="card-text" id="danaDibutuhkan"><strong>Rp. 110,000,000</strong></p>
 						</div>
 					</div>
-					<!-- Card Dana Terkumpul -->
-					<div class="col-md-4">
-						<div class="card bg-success text-white text-center">
-							<div class="card-body">
-								<h5 class="card-title">Dana Terkumpul</h5>
-								<p class="card-text" id="donasiTerkumpul">Rp. 0</p>
-							</div>
+				</div>
+				<!-- Card Dana Terkumpul -->
+				<div class="col-md-4 col-sm-12">
+					<div class="card bg-success text-white text-center">
+						<div class="card-body">
+							<h5 class="card-title">Wakaf Terkumpul</h5>
+							<p class="card-text" id="donasiTerkumpul"><strong>Rp. 0</strong></p>
 						</div>
 					</div>
-					<!-- Card Kekurangan -->
-					<div class="col-md-4">
-						<div class="card bg-danger text-white text-center">
-							<div class="card-body">
-								<h5 class="card-title">Kekurangan</h5>
-								<p class="card-text" id="kekurangan">Rp. 100,000,000</p>
+				</div>
+				<!-- Card Kekurangan -->
+				<div class="col-md-4 col-sm-12">
+					<div class="card bg-danger text-white text-center">
+						<div class="card-body">
+							<h5 class="card-title">Kekurangan</h5>
+							<p class="card-text" id="kekurangan"><strong>Rp. 110,000,000</strong></p>
+						</div>
+					</div>
+				</div>
+				<!-- Rekening Donasi -->
+			</div>
+
+			<!-- Carousel-->
+
+			<div class="row my-4">
+				<!-- Carousel -->
+				<div class="col-md-8 col-sm-12">
+					<div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="1.jpeg" class="d-block w-100" alt="Image 1" />
 							</div>
+							<div class="carousel-item">
+								<img src="2.jpeg" class="d-block w-100" alt="Image 2" />
+							</div>
+							<div class="carousel-item">
+								<img src="3.jpeg" class="d-block w-100" alt="Image 3" />
+							</div>
+							<div class="carousel-item">
+								<img src="4.jpeg" class="d-block w-100" alt="Image 4" />
+							</div>
+							<div class="carousel-item">
+								<img src="5.jpeg" class="d-block w-100" alt="Image 5" />
+							</div>
+							<div class="carousel-item">
+								<img src="6.jpeg" class="d-block w-100" alt="Image 6" />
+							</div>
+							<div class="carousel-item">
+								<img src="7.jpeg" class="d-block w-100" alt="Image 7" />
+							</div>
+							<div class="carousel-item">
+								<img src="8.jpeg" class="d-block w-100" alt="Image 8" />
+							</div>
+							<div class="carousel-item">
+								<img src="9.jpeg" class="d-block w-100" alt="Image 9" />
+							</div>
+							<div class="carousel-item">
+								<img src="10.jpeg" class="d-block w-100" alt="Image 10" />
+							</div>
+							<div class="carousel-item">
+								<img src="11.jpeg" class="d-block w-100" alt="Image 11" />
+							</div>
+							<div class="carousel-item">
+								<img src="12.jpeg" class="d-block w-100" alt="Image 12" />
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+
+				<!-- Card Informasi Rekening Wakaf -->
+				<div class="col-md-4 col-sm-12">
+					<div class="card bg-warning">
+						<div class="card-body text-center">
+							<h5 class="card-title">Rekening Wakaf</h5>
+							<p class="card-text">
+								<strong>Bank BRI no : 6985-01-046628-53-5</strong> <br />
+								Atas Nama: <strong>Yayasan Mushola SDN Trengguno</strong>
+							</p>
+							<a href="https://wa.me/+6281802744454" class="btn btn-primary wakaf-btn me-2"> <i class="bi bi-whatsapp"></i> Konfirmasi Wakaf </a>
+							<a href="https://wa.me/+6282136525354" class="btn btn-primary wakaf-btn"> <i class="bi bi-whatsapp"></i> Konfirmasi Wakaf </a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Data Table -->
+
+			<!-- Modal for displaying large image -->
+			<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="imageModalLabel">Gambar Besar</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body text-center">
+							<img id="largeImage" src="" alt="Large view" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+			</div>
 			<table id="example" class="table table-striped table-bordered"></table>
 		</div>
+		<!-- Data Table -->
 		<footer>
 			<p>© 2024 SDN Trengguno Ponjong. All Rights Reserved.</p>
 		</footer>
@@ -61,7 +151,6 @@
 		<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-		<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>
