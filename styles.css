@@ -107,6 +107,24 @@ footer {
 	padding-block-end: 2px;
 	border-radius: 10px;
 }
+.carousel-global-btn {
+    position: absolute;
+    inset-block-end: 10px; /* Jarak dari bawah */
+    inset-inline-end: 10px; /* Jarak dari kanan */
+    z-index: 10; /* Pastikan tombol tetap di atas elemen lainnya */
+    background: rgba(0, 0, 0, 0.7); /* Warna tombol dengan transparansi */
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.carousel-global-btn:hover {
+    background: rgba(255, 255, 255, 0.7); /* Ubah warna saat hover */
+    color: black;
+}
 
 @media (max-inline-size: 768px) {
 	h3,
